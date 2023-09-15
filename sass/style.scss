@@ -1,0 +1,14 @@
+@use 'mixin';
+@use  'menu';
+
+@font-face {
+  font-family: 'Marske';
+  src: url('/Marske/Marske.otf') format('truetype');
+  font-style: italic;
+    font-weight: bold;
+  }
+
+  body {background-color: rgba(78, 79, 104, 0.733);
+    
+    color: white;
+  }
