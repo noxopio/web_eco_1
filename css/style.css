@@ -1,3 +1,4 @@
+@charset "UTF-8";
 span {
   letter-spacing: 5px;
   color: white;
@@ -38,13 +39,22 @@ span {
 }
 
 ul {
+  max-width: 20%;
   list-style-type: none;
   margin: 0;
+  top: 24em;
   padding: 0;
+  border-radius: 50px 0 50px 0/70px 0 70px 0;
   width: 25%;
-  background-color: rgba(0, 0, 0, 0.568627451);
+  background-color: rgba(0, 0, 0, 0.6862745098);
   position: fixed;
-  height: 26%;
+  font-size: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: auto;
   overflow: auto;
 }
 
@@ -66,9 +76,34 @@ li a:hover:not(.active) {
 }
 
 .contenedor {
+  position: relative;
+  top: 12em;
+  margin-bottom: 15em;
+  max-width: 45em;
   margin-left: 25%;
+  margin-right: 25%;
   padding: 1px 16px;
   height: 1000px;
+}
+.contenedor .photos {
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+}
+
+#hero {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 15vh;
+  color: rgb(255, 255, 255);
+  background: url(/img/tech-red.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  font-size: 1.5em;
+  z-index: 4;
 }
 
 @font-face {
@@ -77,9 +112,53 @@ li a:hover:not(.active) {
   font-style: italic;
   font-weight: bold;
 }
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: rgba(78, 79, 104, 0.733);
+  background-color: rgba(81, 86, 228, 0.575);
   color: white;
+}
+
+/* Estilos para la galería */
+#galeria {
+  position: fixed;
+  top: 8em;
+  z-index: -1;
+  margin-left: 85%;
+}
+
+.imagen {
+  width: 8em;
+  height: 8em;
+  margin: 10px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+footer {
+  margin-top: 1em;
+  background: linear-gradient(260deg, rgba(0, 253, 13, 0.295) 0%, rgba(49, 192, 17, 0.92) 74%, rgba(255, 255, 255, 0.919) 100%);
+  padding: 10px 10px;
+  padding: 0px;
+  text-align: center;
+}
+footerp {
+  font-weight: bold;
+  color: rgb(185, 255, 215);
+  font-size: 2em;
+  box-shadow: 1px 1px 20px greenyellow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */

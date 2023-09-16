@@ -1,7 +1,17 @@
+const imagenes= [
+    "/img/image-five.jpg",
+    "/img/news1.jpg",
+    // Agrega más rutas de imágenes según sea necesario
+];
 
 
 
-const barcelona = {
+
+
+
+const quienesSomos = {
+
+
     titulo: 'Descubre Barcelona: La joya de Cataluña',
     precio:'El precio promocional  es de 450' ,
     subtitulo: 'Sumérgete en la historia, cultura y belleza de esta vibrante ciudad',
@@ -9,15 +19,18 @@ const barcelona = {
 }
 
 const roma = {
-    titulo: 'Roma: Tesoros eternos en la Ciudad Eterna',
+    titulo: 'Roma: Tesoros eternos en la Ciudad Eterna ',
+    
     precio:'El precio promocional  es de 750' ,
     subtitulo: 'Sumérgete en la grandeza histórica, el arte y la cultura de la capital italiana',
-    parrafo: "Bienvenidos a Roma, una ciudad que respira historia y que te transportará a través de los siglos. Conocida como la Ciudad Eterna, Roma es el hogar de una riqueza inigualable de monumentos antiguos, arte renacentista y una cultura vibrante que te cautivará desde el primer momento. <br> <br> Nuestro viaje por Roma comienza en el corazón de la antigua Roma: el Coliseo. Este imponente anfiteatro es una de las maravillas arquitectónicas más emblemáticas del mundo y te dejará sin aliento con su magnificencia. Imagina los emocionantes combates de gladiadores y las representaciones teatrales que una vez tuvieron lugar en este legendario lugar.<br> <br> A pocos pasos del Coliseo, descubrirás el Foro Romano, el centro político y social de la antigua Roma. Recorre las ruinas de antiguos templos, arcos triunfales y basílicas, y déjate llevar por la majestuosidad de este lugar lleno de historia. <br> <br> Continuando nuestro recorrido, nos dirigimos al Vaticano, el enclave independiente más pequeño del mundo y el corazón espiritual del catolicismo. La Basílica de San Pedro, con su icónica cúpula diseñada por Miguel Ángel, te impresionará con su belleza y esplendor. No olvides visitar también los Museos Vaticanos, donde podrás admirar una impresionante colección de arte, incluyendo la famosa Capilla Sixtina, con sus frescos creados por grandes artistas renacentistas.<br> <br>     Roma también es conocida por sus encantadoras plazas y fuentes. La Piazza Navona, con su arquitectura barroca y su famosa Fuente de los Cuatro Ríos, te invita a relajarte y disfrutar del ambiente romano. La Fontana di Trevi, la fuente más famosa de la ciudad, es un lugar de visita obligada para lanzar una moneda y asegurarte de volver a Roma en el futuro.<br> <br>        Pasear por las calles adoquinadas del Trastevere te sumergirá en la auténtica vida romana. Descubre sus encantadoras plazas, sus coloridas fachadas y sus animados bares y restaurantes, donde podrás probar la deliciosa cocina italiana.<br> <br>        Roma también es famosa por sus catacumbas, vastos sistemas subterráneos de túneles y cámaras funerarias. Explora las catacumbas de San Calixto o las catacumbas de San Sebastián y descubre este fascinante legado de la Roma antigua.<br> <br>        En resumen, Roma es una ciudad que te transportará en el tiempo y te sumergirá en una riqueza inigualable de historia, arte y cultura. Desde sus monumentos antiguos hasta sus plazas encantadoras y su deliciosa gastronomía, cada rincón de Roma tiene una historia que contar. Prepárate para maravillarte con la grandeza de la Ciudad Eterna y déjate cautivar por su encanto eterno."
+    photo: ' <img class="photos"  src="/img/news2.jpg" >',  
+    parrafo: "  Bienvenidos a Roma, una ciudad que respira historia y que te transportará a través de los siglos. Conocida como la Ciudad Eterna, Roma es el hogar de una riqueza inigualable de monumentos antiguos, arte renacentista y una cultura vibrante que te cautivará desde el primer momento. <br> <br> Nuestro viaje por Roma comienza en el corazón de la antigua Roma: el Coliseo. Este imponente anfiteatro es una de las maravillas arquitectónicas más emblemáticas del mundo y te dejará sin aliento con su magnificencia. Imagina los emocionantes combates de gladiadores y las representaciones teatrales que una vez tuvieron lugar en este legendario lugar.<br> <br> A pocos pasos del Coliseo, descubrirás el Foro Romano, el centro político y social de la antigua Roma. Recorre las ruinas de antiguos templos, arcos triunfales y basílicas, y déjate llevar por la majestuosidad de este lugar lleno de historia. <br> <br> Continuando nuestro recorrido, nos dirigimos al Vaticano, el enclave independiente más pequeño del mundo y el corazón espiritual del catolicismo. La Basílica de San Pedro, con su icónica cúpula diseñada por Miguel Ángel, te impresionará con su belleza y esplendor. No olvides visitar también los Museos Vaticanos, donde podrás admirar una impresionante colección de arte, incluyendo la famosa Capilla Sixtina, con sus frescos creados por grandes artistas renacentistas.<br> <br>     Roma también es conocida por sus encantadoras plazas y fuentes. La Piazza Navona, con su arquitectura barroca y su famosa Fuente de los Cuatro Ríos, te invita a relajarte y disfrutar del ambiente romano. La Fontana di Trevi, la fuente más famosa de la ciudad, es un lugar de visita obligada para lanzar una moneda y asegurarte de volver a Roma en el futuro.<br> <br>        Pasear por las calles adoquinadas del Trastevere te sumergirá en la auténtica vida romana. Descubre sus encantadoras plazas, sus coloridas fachadas y sus animados bares y restaurantes, donde podrás probar la deliciosa cocina italiana.<br> <br>        Roma también es famosa por sus catacumbas, vastos sistemas subterráneos de túneles y cámaras funerarias. Explora las catacumbas de San Calixto o las catacumbas de San Sebastián y descubre este fascinante legado de la Roma antigua.<br> <br>        En resumen, Roma es una ciudad que te transportará en el tiempo y te sumergirá en una riqueza inigualable de historia, arte y cultura. Desde sus monumentos antiguos hasta sus plazas encantadoras y su deliciosa gastronomía, cada rincón de Roma tiene una historia que contar. Prepárate para maravillarte con la grandeza de la Ciudad Eterna y déjate cautivar por su encanto eterno."
 }
 
 const paris = {
+    
     titulo: 'París: La Ciudad de la Luz y el Romance',
-    precio:'El precio promocional  es de 550' ,
+    precio:'500',
     subtitulo: 'Explora la elegancia, la cultura y el encanto de la capital francesa',
     parrafo: "Bienvenidos a París, una ciudad que ha cautivado a visitantes de todo el mundo con su belleza, elegancia y romance. Conocida como la Ciudad de la Luz, París ofrece una mezcla única de historia, arte, cultura y gastronomía que la convierte en un destino verdaderamente inolvidable.    <br> <br>    Nuestro viaje por París comienza en el corazón de la ciudad, en la icónica Torre Eiffel. Esta estructura emblemática, construida para la Exposición Universal de 1889, te brindará una vista panorámica impresionante de la ciudad. Ya sea que decidas subir a la cima o simplemente admirarla desde el suelo, la Torre Eiffel es un símbolo inconfundible de París.    <br> <br>    Continuando nuestro recorrido, nos adentramos en el encantador barrio de Montmartre, conocido por su atmósfera bohemia y su belleza pintoresca. Explora sus estrechas calles empedradas y llega a la imponente Basílica del Sagrado Corazón, que ofrece vistas panorámicas de la ciudad. No olvides visitar el famoso cabaret Moulin Rouge y disfrutar de un espectáculo lleno de energía y glamour.    <br> <br>    El siguiente destino es el Louvre, uno de los museos más grandes y famosos del mundo. Admira obras maestras como la Mona Lisa y la Venus de Milo, mientras te maravillas con la grandiosidad del Palacio del Louvre, una joya arquitectónica en sí misma. Recorrer sus galerías es sumergirse en la historia del arte y la cultura.    <br> <br>    Cruzar el río Sena nos lleva al encantador barrio de Saint-Germain-des-Prés, conocido por sus librerías, cafés históricos y ambiente intelectual. Sumérgete en la cultura parisina mientras disfrutas de un café en el famoso Café de Flore o exploras las tiendas de moda y galerías de arte de la zona.    <br> <br>    El encanto de París se extiende a sus exquisitos jardines. El Jardín de Luxemburgo y el Jardín de las Tullerías son oasis de paz y belleza, donde puedes relajarte y disfrutar de la serenidad en medio de la bulliciosa ciudad. Da un paseo romántico por sus senderos bordeados de flores o disfruta de un tranquilo picnic bajo la sombra de los árboles.    <br> <br>    No puedes visitar París sin explorar la encantadora isla de la Cité, donde se encuentra la famosa Catedral de Notre Dame. Esta obra maestra gótica, con su impresionante arquitectura y hermosas vidrieras, te transportará a tiempos pasados. Aunque la catedral sufrió un incendio en 2019, su grandeza sigue siendo cautivadora y su reconstrucción está en marcha.    <br> <br>    En resumen, París es una ciudad que te envuelve con su elegancia, cultura y romance. Desde sus monumentos icónicos hasta sus encantadores barrios, la capital francesa ofrece una experiencia única llena de historia y encanto."
 }
@@ -30,10 +43,11 @@ const londres = {
 }
 
 export {
-    barcelona,
+    quienesSomos,
     roma,
     paris,
-    londres
+    londres,
+    imagenes
 };
 
 

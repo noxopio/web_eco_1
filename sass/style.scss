@@ -1,5 +1,6 @@
 @use 'mixin';
 @use  'menu';
+@use 'hero';
 
 @font-face {
   font-family: 'Marske';
@@ -8,7 +9,81 @@
     font-weight: bold;
   }
 
-  body {background-color: rgba(78, 79, 104, 0.733);
+  *{
+margin: 0;
+box-sizing: border-box;
+
+  }
+
+  body {background-color: rgba(81, 86, 228, 0.575);
     
     color: white;
+
+
+
   }
+
+
+
+/* Estilos para la galería */
+#galeria {
+  position: fixed;
+  top: 8em;
+  
+  z-index: -1;
+  margin-left: 85%;
+ 
+
+
+
+
+}
+
+.imagen {
+  width: 8em;
+  height: 8em;
+  margin: 10px;
+  overflow: hidden;
+  border-radius: 50%;
+
+}
+
+.imagen img {
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+
+
+  
+footer{
+
+
+margin-top: 1em;
+  background: linear-gradient(260deg, rgba(0, 253, 13, 0.295) 0%, rgba(49, 192, 17, 0.92) 74%, rgba(255, 255, 255, 0.919) 100%);
+  padding: 10px 10px;
+  padding: 0px;
+
+text-align: center;
+
+  &p{
+      
+    font-weight: bold;
+    color: rgb(185, 255, 215);
+    font-size: 2em;
+    box-shadow: 1px 1px 20px greenyellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+}
+
+
+
+
