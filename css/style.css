@@ -39,16 +39,16 @@ span {
 }
 
 ul {
-  max-width: 20%;
+  max-width: 20em;
   list-style-type: none;
   margin: 0;
-  top: 24em;
+  word-wrap: break-word;
+  top: 16em;
   padding: 0;
   border-radius: 50px 0 50px 0/70px 0 70px 0;
   width: 25%;
-  background-color: rgba(0, 0, 0, 0.6862745098);
   position: fixed;
-  font-size: 8px;
+  font-size: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,32 +60,53 @@ ul {
 
 li a {
   display: block;
-  color: #00ccff;
+  color: rgb(22, 26, 37);
   padding: 8px 16px;
   text-decoration: none;
 }
 
 li a.active {
-  background-color: rgba(4, 170, 109, 0.0392156863);
-  color: rgba(255, 255, 255, 0.637);
+  border: solid 2px rgb(144, 196, 149);
+  border-radius: 50px 0 50px 0/70px 0 70px 0;
+  width: auto;
+  color: rgb(144, 196, 149);
 }
 
 li a:hover:not(.active) {
-  background-color: #555;
-  color: white;
+  border: solid 1px #05fda2;
+  border-radius: 50px 0 50px 0/70px 0 70px 0;
+  color: rgb(245, 116, 0);
 }
 
 .contenedor {
   position: relative;
-  top: 12em;
+  box-shadow: inset 20px 20px 60px #d9d9d9, inset -20px -20px 60px #ffffff;
+  top: 8em;
   margin-bottom: 15em;
   max-width: 45em;
   margin-left: 25%;
   margin-right: 25%;
+  word-wrap: wrap;
   padding: 1px 16px;
-  height: 1000px;
+  object-fit: cover;
+  height: auto;
+  color: rgb(22, 26, 37);
+  background-position: left top;
+  background-attachment: fixed;
+  background: url(/img/149740-009688.svg);
+  border: solid 1px rgb(144, 196, 149);
+  border-radius: 20px;
+  align-items: center;
+  transition: all 400ms;
+}
+.contenedor #titulo {
+  text-align: center;
 }
 .contenedor .photos {
+  padding: 1em;
+  border-radius: 100px 0 100px 0/100px 0 100px 0;
+  object-fit: cover;
+  margin: auto 25%;
   width: 50%;
   height: 50%;
   object-fit: cover;
@@ -96,14 +117,47 @@ li a:hover:not(.active) {
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 15vh;
-  color: rgb(255, 255, 255);
-  background: url(/img/tech-red.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
+  height: 5vh;
+  color: rgb(144, 196, 149);
   font-size: 1.5em;
   z-index: 4;
+}
+
+.inverted {
+  filter: invert(20%);
+}
+
+footer {
+  margin-top: 16px;
+  position: fixed;
+  bottom: 0.5em;
+  width: 100%;
+  text-align: center;
+}
+footerp {
+  font-weight: bold;
+  color: rgb(185, 255, 215);
+  font-size: 2em;
+  box-shadow: 1px 1px 20px greenyellow;
+  display: flex;
+  flex-direction: column;
+}
+footer .social-ico {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 10px;
+  width: auto;
+  transition: 600ms ease-in;
+}
+footer .social-ico .ico {
+  max-width: 4em;
+  padding: 6px;
+}
+footer .social-ico .ico:hover {
+  transform: scale(0.5);
+  box-shadow: 1px 1px 10px greenyellow;
+  transition: 400ms ease-in;
 }
 
 @font-face {
@@ -118,15 +172,17 @@ li a:hover:not(.active) {
 }
 
 body {
-  background-color: rgba(81, 86, 228, 0.575);
-  color: white;
+  background: center/contain no-repeat url("/img/back.svg");
+  background-position: right center;
+  background-attachment: fixed;
+  scroll-behavior: smooth;
 }
 
 /* Estilos para la galería */
 #galeria {
   position: fixed;
   top: 8em;
-  z-index: -1;
+  z-index: 2;
   margin-left: 85%;
 }
 
@@ -142,23 +198,6 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-footer {
-  margin-top: 1em;
-  background: linear-gradient(260deg, rgba(0, 253, 13, 0.295) 0%, rgba(49, 192, 17, 0.92) 74%, rgba(255, 255, 255, 0.919) 100%);
-  padding: 10px 10px;
-  padding: 0px;
-  text-align: center;
-}
-footerp {
-  font-weight: bold;
-  color: rgb(185, 255, 215);
-  font-size: 2em;
-  box-shadow: 1px 1px 20px greenyellow;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */

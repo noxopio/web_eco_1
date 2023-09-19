@@ -3,30 +3,17 @@ import {
 
     quienesSomos, roma, paris, londres,imagenes 
 } from '/js/menu.js'
-
-
-
-
-
-
-
-
-
-imagenes.forEach(function(ruta) {
-    var imagen = document.createElement("div");
-    imagen.className = "imagen";
-
-    var imgElement = document.createElement("img");
-    imgElement.src = ruta;
-
-    imagen.appendChild(imgElement);
-    galeria.appendChild(imagen);
-});
-
-
-
-
-
+    imagenes.forEach(function(ruta) {
+        let imagen = document.createElement("div");
+        imagen.className = "imagen";
+    
+        let imgElement = document.createElement("img");
+        imgElement.src = ruta;
+        imgElement.title = "nosotros"; // Reemplaza esto con tu descripción deseada
+    
+        imagen.appendChild(imgElement);
+        galeria.appendChild(imagen);
+    });
 
 let enlaces = document.querySelectorAll('a');
 let tituloElemento = document.getElementById('titulo');
@@ -37,33 +24,12 @@ let photoElemento = document.getElementById('photo');
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 enlaces.forEach(function (enlace) {
-
-
-    
-    
-
     
     enlace.addEventListener('click', function () {
         enlaces.forEach(function (enlace) {
 
-   
-       
-
+    
 
             enlace.classList.remove('active');
         });

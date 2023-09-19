@@ -1,3 +1,15 @@
+$fourColor:rgb(245, 116, 0);
+$firtsColor:rgb(228, 24, 42);
+$secondColor:rgb(144, 196, 149);
+$terColor:rgb(80, 95, 120);
+$textColor:rgb(22, 26, 37);
+
+
+
+
+
+
+
 #hero {
 
  
@@ -5,12 +17,17 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-       height: 15vh;
-    color: rgb(255, 255, 255);
-    background: url(/img/tech-red.jpg);
-    background-repeat: no-repeat;
-    background-size:cover;
-    background-position: center center;
+       height: 5vh;
+    color:$secondColor;
+//background: url(/img/tech-red.jpg);
+  //  background-repeat: no-repeat;
+    //background-size:cover;
+    //background-position: center center;
+
   font-size: 1.5em;
   z-index: 4;
   }
+
+  .inverted {
+   filter: invert(20%);
+}

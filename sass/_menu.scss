@@ -1,71 +1,108 @@
 @use 'mixin';
 
+$fourColor:rgb(245, 116, 0);
+$firtsColor:rgb(228, 24, 42);
+$secondColor:rgb(144, 196, 149);
+$terColor:rgb(80, 95, 120);
+$textColor:rgb(22, 26, 37);
 
 ul {
-    max-width: 20%;
- 
-   
+    max-width: 20em;
     list-style-type: none;
     margin: 0;
-   top: 24em;
+    word-wrap: break-word;
+    top: 16em;
     padding: 0;
     border-radius: 50px 0 50px 0 / 70px 0 70px 0;
     width: 25%;
-    background-color: #000000af;
+    // background-color: #000000af;
     position: fixed;
 
-    font-size: 8px;
+
+    font-size: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     flex-direction: column;
 
-    
 
-    
+
+
     height: auto;
     overflow: auto;
 }
 
 li a {
     display: block;
-    color: #00ccff;
+    color: $textColor;
     padding: 8px 16px;
     text-decoration: none;
+
 }
 
 li a.active {
-    background-color: #04aa6d0a;
-    color: rgba(255, 255, 255, 0.637);
+    border: solid 2px $secondColor;
+    border-radius: 50px 0 50px 0 / 70px 0 70px 0;
+    // background-color: #05fda2;
+    width: auto;
+    color: $secondColor;
+
 }
 
 li a:hover:not(.active) {
-    background-color: #555;
-    color: white;
+    // background-color: #555;
+
+    border: solid 1px #05fda2;
+    border-radius: 50px 0 50px 0 / 70px 0 70px 0;
+    color: $fourColor;
 }
 
 
 .contenedor {
+
     position: relative;
-    
-    top: 12em;
+    box-shadow: inset 20px 20px 60px #d9d9d9,
+        inset -20px -20px 60px #ffffff;
+    top: 8em;
     margin-bottom: 15em;
     max-width: 45em;
     margin-left: 25%;
     margin-right: 25%;
+    word-wrap: wrap;
     padding: 1px 16px;
-    height: 1000px;
+    object-fit: cover;
+    height: auto;
+    color: $textColor;
+    background-position: left top;
+    background-attachment: fixed;
+    background: url(/img/149740-009688.svg);
+    border: solid 1px $secondColor;
+    border-radius: 20px;
+    align-items: center;
 
-    .photos{
+transition: all 400ms;
 
+    #titulo{
+        text-align: center;
+    }
 
+    .photos {
+        padding: 1em;
+        border-radius: 100px 0 100px 0 / 100px 0 100px 0;
+        object-fit: cover;
+        margin: auto 25%;
         width: 50%;
         height: 50%;
         object-fit: cover;
-      }
-  
+
+    }
 }
 
 
-  
+
+
+
+
+
+
