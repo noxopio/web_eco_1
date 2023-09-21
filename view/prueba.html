@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Retráctil Neomorfo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e4f2e4; /* Fondo ecológico */
+            overflow-x: hidden;
+        }
+
+        /* Estilos para el botón de menú */
+        .menu-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #d1e9d1; /* Color de fondo neomorfo */
+            padding: 10px;
+            border-radius: 50%;
+            box-shadow: 8px 8px 16px 0 rgba(0, 0, 0, 0.2), -8px -8px 16px 0 rgba(255, 255, 255, 0.2); /* Efecto neomorfo */
+            cursor: pointer;
+            z-index: 100;
+        }
+
+        /* Estilos para el menú desplegable */
+        .menu {
+            position: fixed;
+            top: 20px;
+            right: -200px; /* Inicialmente oculto */
+            width: 200px;
+            background-color: #d1e9d1; /* Color de fondo neomorfo */
+            box-shadow: 8px 8px 16px 0 rgba(0, 0, 0, 0.2), -8px -8px 16px 0 rgba(255, 255, 255, 0.2); /* Efecto neomorfo */
+            padding: 20px;
+            border-radius: 10px;
+            transition: right 0.3s ease-in-out; /* Transición suave */
+            z-index: 1;
+        }
+
+        /* Estilos para los elementos del menú */
+        .menu-item {
+            margin-bottom: 10px;
+            color: #333; /* Color de texto */
+            text-decoration: none;
+            display: block;
+            font-size: 16px;
+        }
+
+        /* Estilos para el enlace del menú */
+        .menu-item:hover {
+            color: #4caf50; /* Color de texto al pasar el mouse (verde ecológico) */
+        }
+    </style>
+</head>
+<body>
+    <!-- Botón del menú -->
+    <div class="menu-button" id="menuButton">&#9776;</div>
+
+    <!-- Menú desplegable -->
+    <div class="menu" id="menu">
+        <a class="menu-item" href="#">Inicio</a>
+        <a class="menu-item" href="#">Acerca de</a>
+        <a class="menu-item" href="#">Servicios</a>
+        <a class="menu-item" href="#">Contacto</a>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14" fill="none">
+        <path d="M9.13116 5.22404L11.317 7.40984L9.13116 9.59563M5.85247 9.59563L3.66668 7.40984L5.85248 5.22404" stroke="#3F3F46" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    <script>
+        // Función para mostrar u ocultar el menú
+        document.getElementById("menuButton").addEventListener("click", function () {
+            var menu = document.getElementById("menu");
+            if (menu.style.right === "0px") {
+                menu.style.right = "-200px";
+            } else {
+                menu.style.right = "0px";
+            }
+        });
+    </script>
+</body>
+</html>

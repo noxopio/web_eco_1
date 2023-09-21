@@ -4,8 +4,8 @@ span {
   color: white;
   display: block;
   border-radius: 50px;
-  background: #000000;
-  box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.9254901961), -2px -2px 4px #ffffff;
+  background: #ffffff;
+  box-shadow: 2px 2px 4px rgba(206, 201, 201, 0.9254901961), -2px -2px 4px #5f5d5d;
   display: block;
   text-align: center;
   color: rgb(255, 0, 0);
@@ -30,39 +30,46 @@ span {
 
 .loading {
   display: block;
-  margin: 40PX auto;
+  margin: 0 auto;
   border-radius: 1px;
   /*     border-right: 4px solid  whitesmoke; */
-  width: 12ch;
+  width: 40ch;
   animation: typing 2s steps(12), blink 0.5s infinite step-end alternate;
   color: rgba(255, 0, 0, 0.527);
 }
 
+@font-face {
+  font-family: "Marske";
+  src: url("/Marske/Marske.otf") format("truetype");
+  font-style: italic;
+  font-weight: bold;
+}
 ul {
-  max-width: 20em;
+  max-width: auto;
   list-style-type: none;
   margin: 0;
-  word-wrap: break-word;
-  top: 16em;
+  top: 12em;
   padding: 0;
   border-radius: 50px 0 50px 0/70px 0 70px 0;
   width: 25%;
   position: fixed;
+  gap: 0.5em;
   font-size: 14px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   text-align: center;
   flex-direction: column;
-  height: auto;
-  overflow: auto;
 }
 
 li a {
   display: block;
   color: rgb(22, 26, 37);
   padding: 8px 16px;
+  cursor: pointer;
   text-decoration: none;
+  border-radius: 50px 0 50px 0/70px 0 70px 0;
+  box-shadow: inset 20px 20px 60px #ffffff, inset -20px -20px 60px #aaa5a5;
 }
 
 li a.active {
@@ -70,6 +77,7 @@ li a.active {
   border-radius: 50px 0 50px 0/70px 0 70px 0;
   width: auto;
   color: rgb(144, 196, 149);
+  box-shadow: inset 30px 30px 90px #ffffff, inset -30px -30px 90px #463d3d;
 }
 
 li a:hover:not(.active) {
@@ -81,8 +89,8 @@ li a:hover:not(.active) {
 .contenedor {
   position: relative;
   box-shadow: inset 20px 20px 60px #d9d9d9, inset -20px -20px 60px #ffffff;
-  top: 8em;
-  margin-bottom: 15em;
+  top: 0.5em;
+  margin-bottom: 2em;
   max-width: 45em;
   margin-left: 25%;
   margin-right: 25%;
@@ -93,10 +101,11 @@ li a:hover:not(.active) {
   color: rgb(22, 26, 37);
   background-position: left top;
   background-attachment: fixed;
-  background: url(/img/149740-009688.svg);
+  background-color: rgba(144, 196, 149, 0.418);
   border: solid 1px rgb(144, 196, 149);
   border-radius: 20px;
   align-items: center;
+  text-align: center;
   transition: all 400ms;
 }
 .contenedor #titulo {
@@ -107,17 +116,20 @@ li a:hover:not(.active) {
   border-radius: 100px 0 100px 0/100px 0 100px 0;
   object-fit: cover;
   margin: auto 25%;
-  width: 50%;
-  height: 50%;
+  width: 25%;
+  height: 25%;
   object-fit: cover;
 }
 
 #hero {
-  width: 100%;
+  position: sticky;
+  top: 10px;
+  border-radius: 10%;
+  width: auto;
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 5vh;
+  height: auto;
   color: rgb(144, 196, 149);
   font-size: 1.5em;
   z-index: 4;
@@ -127,45 +139,44 @@ li a:hover:not(.active) {
   filter: invert(20%);
 }
 
-footer {
-  margin-top: 16px;
+.contacto {
   position: fixed;
-  bottom: 0.5em;
-  width: 100%;
-  text-align: center;
-}
-footerp {
+  top: 12em;
+  z-index: 2;
+  margin-left: 75%;
+  justify-content: space-around;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
   font-weight: bold;
-  color: rgb(185, 255, 215);
+}
+.contactop {
+  color: rgb(0, 0, 0);
   font-size: 2em;
   box-shadow: 1px 1px 20px greenyellow;
   display: flex;
   flex-direction: column;
 }
-footer .social-ico {
+.contacto .social-ico {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  border-radius: 10px;
-  width: auto;
+  direction: row;
+  justify-content: space-around;
+  margin: 10px;
   transition: 600ms ease-in;
 }
-footer .social-ico .ico {
-  max-width: 4em;
-  padding: 6px;
+.contacto .social-ico .ico {
+  max-width: 2em;
+  border: solid 1px rgb(144, 196, 149);
+  border-radius: 20%;
 }
-footer .social-ico .ico:hover {
-  transform: scale(0.5);
-  box-shadow: 1px 1px 10px greenyellow;
+.contacto .social-ico .ico img {
+  max-width: 20px;
+}
+.contacto .social-ico .ico:hover {
+  transform: scale(1.1);
+  box-shadow: 1px 1px 1px greenyellow;
   transition: 400ms ease-in;
 }
 
-@font-face {
-  font-family: "Marske";
-  src: url("/Marske/Marske.otf") format("truetype");
-  font-style: italic;
-  font-weight: bold;
-}
 * {
   margin: 0;
   box-sizing: border-box;
@@ -180,16 +191,22 @@ body {
 
 /* Estilos para la galería */
 #galeria {
-  position: fixed;
-  top: 8em;
-  z-index: 2;
-  margin-left: 85%;
+  display: flex;
+  height: auto;
+  width: 100wh;
+  flex-direction: row;
+  align-items: center;
+  box-shadow: inset 20px 20px 60px #d9d9d9, inset -20px -20px 60px #5ecf01;
+  justify-content: space-around;
+  font-weight: bold;
+  color: rgb(185, 255, 215);
+  font-size: 1em;
 }
 
 .imagen {
-  width: 8em;
-  height: 8em;
-  margin: 10px;
+  width: 4em;
+  height: 4em;
+  margin: 0.5em;
   overflow: hidden;
   border-radius: 50%;
 }
@@ -197,6 +214,23 @@ body {
 .imagen img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+}
+
+.backjas {
+  text-align: center;
+  background-color: rgb(144, 196, 149);
+  border-radius: 1%;
+  box-shadow: inset 20px 20px 60px #d9d9d9, inset -20px -20px 60px #5ecf01;
+}
+
+.imagen_inicio {
+  padding: 4em;
+  border-radius: 100px 0 100px 0/100px 0 100px 0;
+  object-fit: cover;
+  margin: auto 25%;
+  width: 50%;
+  height: 50%;
   object-fit: cover;
 }
 

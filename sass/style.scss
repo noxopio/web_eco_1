@@ -2,20 +2,9 @@
 @use 'menu';
 @use 'hero';
 @use 'color';
-@use 'footer';
+@use 'contacto';
 
-$fourColor:#f57400;
-$firtsColor:rgb(228, 24, 42);
-$secondColor:#90c495;
-$terColor:rgb(80, 95, 120);
-$textColor:#161a25;
 
-@font-face {
-  font-family: 'Marske';
-  src: url('/Marske/Marske.otf') format('truetype');
-  font-style: italic;
-  font-weight: bold;
-}
 
 * {
   margin: 0;
@@ -24,7 +13,6 @@ $textColor:#161a25;
 }
 
 body {
-  
   background: center / contain no-repeat url('/img/back.svg');
 
   background-position: right center;
@@ -34,27 +22,61 @@ body {
 
 /* Estilos para la galería */
 #galeria {
-  position: fixed;
-  top: 8em;
-  z-index: 2;
-  margin-left: 85%;
+
+  display: flex;
+  height: auto;
+  width: 100wh;
+
+  flex-direction: row;
+  align-items: center;
+  box-shadow: inset 20px 20px 60px #d9d9d9,
+  inset -20px -20px 60px #5ecf01;
+justify-content: space-around;
+
+    
+    font-weight: bold;
+    color: rgb(185, 255, 215);
+    font-size: 1em;
+    
+
+
 }
 
 
 .imagen {
-  width: 8em;
-  height: 8em;
-  margin: 10px;
+
+  width: 4em;
+  height: 4em;
+ margin: .5em;
   overflow: hidden;
   border-radius: 50%;
+  
+  
 }
 .imagen img {
+ 
   width: 100%;
   height: 100%;
   object-fit: cover;
+  
   
 }
 
 
 
+.backjas{
+  text-align: center;
+  background-color: color.$secondColor;
+  border-radius: 1%;
+  box-shadow: inset 20px 20px 60px #d9d9d9,
+  inset -20px -20px 60px #5ecf01;
+}
 
+.imagen_inicio {
+  padding: 4em;
+  border-radius: 100px 0 100px 0 / 100px 0 100px 0;
+  object-fit: cover;
+  margin: auto 25%;
+  width: 50%;
+  height: 50%;
+  object-fit: cover;}

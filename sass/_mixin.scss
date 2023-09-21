@@ -44,9 +44,9 @@
 
 @mixin neo($radius, $eje) {
     border-radius: $radius;
-    background: #000000;
-    box-shadow: $eje $eje ($eje*2)#ffffffec,
-        (-$eje) (-$eje) ($eje*2) #ffffff;
+    background: #ffffff;
+    box-shadow: $eje $eje ($eje*2)#cec9c9ec,
+        (-$eje) (-$eje) ($eje*2) #5f5d5d;
         @include tiping;
 }
 
@@ -60,16 +60,28 @@ span {
 
    
 
+
+@mixin flexBox {
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
     
 }
 .loading{
 
     display: block;
-    margin: 40PX auto;
+    margin: 0 auto;
    
     border-radius: 1px;
 /*     border-right: 4px solid  whitesmoke; */ 
-    width: 12ch;
+    width: 40ch;
     animation: typing 2s steps(12), blink .5s infinite step-end alternate;
     color:rgba(255, 0, 0, 0.527);
 
@@ -78,3 +90,10 @@ span {
 
 
 
+
+@font-face {
+    font-family: 'Marske';
+    src: url('/Marske/Marske.otf') format('truetype');
+    font-style: italic;
+    font-weight: bold;
+  }

@@ -1,52 +1,55 @@
 @use 'mixin';
 
-$fourColor:rgb(245, 116, 0);
-$firtsColor:rgb(228, 24, 42);
-$secondColor:rgb(144, 196, 149);
-$terColor:rgb(80, 95, 120);
-$textColor:rgb(22, 26, 37);
+@use 'color';
 
 ul {
-    max-width: 20em;
+    max-width:auto;
     list-style-type: none;
     margin: 0;
-    word-wrap: break-word;
-    top: 16em;
+   
+    top: 12em;
     padding: 0;
     border-radius: 50px 0 50px 0 / 70px 0 70px 0;
     width: 25%;
     // background-color: #000000af;
     position: fixed;
-
+    gap: .5em;
 
     font-size: 14px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     text-align: center;
     flex-direction: column;
 
 
 
 
-    height: auto;
-    overflow: auto;
+
+  
 }
 
 li a {
     display: block;
-    color: $textColor;
+    color: color.$textColor;
     padding: 8px 16px;
+    cursor: pointer;
+
     text-decoration: none;
+    border-radius: 50px 0 50px 0 / 70px 0 70px 0;
+    box-shadow: inset 20px 20px 60px #ffffff,
+    inset -20px -20px 60px #aaa5a5;
 
 }
 
 li a.active {
-    border: solid 2px $secondColor;
+    border: solid 2px color.$secondColor;
     border-radius: 50px 0 50px 0 / 70px 0 70px 0;
     // background-color: #05fda2;
     width: auto;
-    color: $secondColor;
+    color: color.$secondColor;
+    box-shadow: inset 30px 30px 90px #ffffff,
+    inset -30px -30px 90px #463d3d;
 
 }
 
@@ -55,7 +58,7 @@ li a:hover:not(.active) {
 
     border: solid 1px #05fda2;
     border-radius: 50px 0 50px 0 / 70px 0 70px 0;
-    color: $fourColor;
+    color:color.$fourColor;
 }
 
 
@@ -64,8 +67,8 @@ li a:hover:not(.active) {
     position: relative;
     box-shadow: inset 20px 20px 60px #d9d9d9,
         inset -20px -20px 60px #ffffff;
-    top: 8em;
-    margin-bottom: 15em;
+    top: .5em;
+    margin-bottom: 2em;
     max-width: 45em;
     margin-left: 25%;
     margin-right: 25%;
@@ -73,13 +76,16 @@ li a:hover:not(.active) {
     padding: 1px 16px;
     object-fit: cover;
     height: auto;
-    color: $textColor;
+    color:color.$textColor;
     background-position: left top;
     background-attachment: fixed;
-    background: url(/img/149740-009688.svg);
-    border: solid 1px $secondColor;
+    
+    background-color:rgba(144, 196, 149, 0.418);
+    //background: url(/img/149740-009688.svg);
+    border: solid 1px color.$secondColor;
     border-radius: 20px;
     align-items: center;
+    text-align: center;
 
 transition: all 400ms;
 
@@ -92,14 +98,13 @@ transition: all 400ms;
         border-radius: 100px 0 100px 0 / 100px 0 100px 0;
         object-fit: cover;
         margin: auto 25%;
-        width: 50%;
-        height: 50%;
+        width: 25%;
+        height: 25%;
         object-fit: cover;
+       
 
     }
 }
-
-
 
 
 
