@@ -2,34 +2,74 @@
 
 @use 'color';
 
-ul {
-    max-width:auto;
+#toogleMenu {
+
+    position: sticky;
+    top: 20rem;
+    left: 1%;
+    height: 4em;
+    width: 4rem;
+ 
+
+    @include mixin.neo(2px, 2px);
+    background-image: url(/img/eco1.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    cursor: pointer;
+
+    border-radius: 10PX;
+    align-content: center;
+    justify-content: center;
+
+    color: color.$textColor;
+    transition: all ease-in 400ms;
+
+    &:hover {
+        transform: scale(1.1);
+        box-shadow: 1px 1px color.$fourColor;
+
+
+    }
+}
+
+.activeNav {
+    display: none;
+}
+
+
+.navMenu-ul {
+   
+    position:fixed;
+    max-width: 10%;
     list-style-type: none;
     margin: 0;
-   
-    top: 12em;
+    left: 1.5rem;
+    top: 25rem;
+
     padding: 0;
     border-radius: 50px 0 50px 0 / 70px 0 70px 0;
-    width: 25%;
-    // background-color: #000000af;
-    position: fixed;
-    gap: .5em;
 
-    font-size: 14px;
+    // background-color: #000000af;
+    gap: .5em;
+    z-index: 1;
+    font-size: 1rem;
+    flex-wrap: nowrap;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-around;
     text-align: center;
-    flex-direction: column;
+    transition: all ease 400ms;
 
 
 
 
 
-  
 }
 
-li a {
+.navMenu-li a {
     display: block;
     color: color.$textColor;
     padding: 8px 16px;
@@ -38,76 +78,93 @@ li a {
     text-decoration: none;
     border-radius: 50px 0 50px 0 / 70px 0 70px 0;
     box-shadow: inset 20px 20px 60px #ffffff,
-    inset -20px -20px 60px #aaa5a5;
+        inset -20px -20px 60px #aaa5a5;
 
 }
 
-li a.active {
+.navMenu-li a.active {
     border: solid 2px color.$secondColor;
     border-radius: 50px 0 50px 0 / 70px 0 70px 0;
     // background-color: #05fda2;
     width: auto;
     color: color.$secondColor;
     box-shadow: inset 30px 30px 90px #ffffff,
-    inset -30px -30px 90px #463d3d;
+        inset -30px -30px 90px #463d3d;
 
 }
 
-li a:hover:not(.active) {
+.navMenu-li a:hover:not(.active) {
     // background-color: #555;
 
     border: solid 1px #05fda2;
     border-radius: 50px 0 50px 0 / 70px 0 70px 0;
-    color:color.$fourColor;
+    color: color.$fourColor;
 }
 
 
 .contenedor {
 
-    position: relative;
+   
+    display: grid;
+    place-content: center;
+    
+  
+   
     box-shadow: inset 20px 20px 60px #d9d9d9,
         inset -20px -20px 60px #ffffff;
-    top: .5em;
-    margin-bottom: 2em;
-    max-width: 45em;
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-bottom: .5rem;
+    margin-left: 15%;
+    margin-right: 10%;
     word-wrap: wrap;
-    padding: 1px 16px;
+flex-basis:auto;
     object-fit: cover;
     height: auto;
-    color:color.$textColor;
+    color: color.$textColor;
+   
+
     background-position: left top;
     background-attachment: fixed;
-    
-    background-color:rgba(144, 196, 149, 0.418);
-    //background: url(/img/149740-009688.svg);
+    @include mixin.neo(5px, 5px);
+ background-color: rgba(148, 185, 154, 0.452);
+backdrop-filter: blur(10%);
     border: solid 1px color.$secondColor;
     border-radius: 20px;
     align-items: center;
     text-align: center;
+    font-size: 24px;
 
-transition: all 400ms;
-
-    #titulo{
+    transition: all 400ms;
+   
+    #titulo {
         text-align: center;
+
+        font-weight: bold;
+        font-size: 30px;
+        background: #202020;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.4), 0px -1px 1px rgba(0, 0, 0, 0.3);
     }
 
+    #parrafo:hover{
+        background-color: color.$backColor;
+    
+
+    }
     .photos {
-        padding: 1em;
+        padding: .5em;
         border-radius: 100px 0 100px 0 / 100px 0 100px 0;
         object-fit: cover;
         margin: auto 25%;
-        width: 25%;
-        height: 25%;
-        object-fit: cover;
-       
+        width: 50%;
+        height: 50%;
+
+
 
     }
 }
-
-
-
-
-
-
+.activeContendor{
+    display: none;
+}

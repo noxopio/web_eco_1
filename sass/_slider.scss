@@ -1,0 +1,22 @@
+.slider{
+
+
+    aspect-ratio: 10/10;
+    width: 300px;
+    position: relative;
+    display: flex;
+    overflow: scroll;
+    scroll-snap-type: 10px mandatory;
+
+
+.slider img{
+
+width: 100%;
+left: 0;
+position: sticky;
+object-fit: cover;
+border-radius: 5px;
+scroll-snap-align: center;
+
+}
+}

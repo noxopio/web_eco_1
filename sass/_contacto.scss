@@ -1,59 +1,25 @@
 @use 'mixin';
 @use 'color';
 
-.contacto {
-  //background: linear-gradient(260deg, rgba(0, 253, 13, 0.295) 0%, rgba(49, 192, 17, 0.92) 74%, rgba(255, 255, 255, 0.919) 100%);
-  position: fixed;
-  top: 12em;
-  z-index: 2;
-  margin-left: 75%;
-  justify-content: space-around;
-  //  background: linear-gradient(260deg, $secondColor 0%, white 74%,$terColor 100%);
-  writing-mode: vertical-rl;
-    text-orientation: upright;
-      font-weight: bold;
+.contactoToogle{
+    display: none;
+    position: absolute;
+    font-weight: bold;
+    top: 1rem;
+    max-width: 400px;
+    padding: 10px;
+    left: 12%;
+    list-style: none;
+    word-wrap: wrap;
+    background: right/ contain  no-repeat url('/img/gota.jpg') rgb(69, 121, 78);
+    border-radius: 2% 25px ;
+    text-align: left;
+    color:color.$textColor;
     
-  // box-shadow:  1px 1px 20px $fourColor;
-
-  &p {
-   
-    color: rgb(0, 0, 0);
-    font-size: 2em;
-    box-shadow: 1px 1px 20px greenyellow;
-   display: flex;
-
-    flex-direction: column;
-
-  }
-
-  .social-ico {
-    display: flex;
-    
-    direction: row;
- justify-content: space-around;
- margin: 10px; 
-   //     border: solid 1px color.$secondColor;
-    transition: 600ms ease-in;
-    
-    .ico {
-     
-    max-width: 2em;
-   
-    border: solid 1px color.$secondColor;
-border-radius: 20%;
-
-    
-     img {
-      
-        max-width: 20px;
-      }
-    }
-    .ico:hover {
-      transform: scale(1.1);
-      box-shadow: 1px 1px 1px greenyellow;
-   
-      transition: 400ms ease-in;
-    }
-
-  }
 }
+.contactoActive{
+
+    display: block;
+}
+
+

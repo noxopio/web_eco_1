@@ -1,0 +1,119 @@
+@use 'mixin';
+@use 'color';
+
+#galeria {
+  background-image: url(/img/city.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+position: absolute;
+bottom: 0;
+  display: flex;
+  flex-direction:row;
+  word-wrap: wrap;
+  height: auto;
+
+  margin-top: 1rem;
+  width: 100%;
+  align-items: center;
+  box-shadow: inset 20px 20px 60px #d9d9d9,
+    inset -20px -20px 60px #5ecf01;
+  justify-content:space-around;
+  gap: 2rem;
+  
+  font-weight: bold;
+  color: color.$textColor;
+  font-size: 1rem;
+flex-grow: 2;
+
+.contacto{
+ 
+font-size: 16px;
+font-style:italic;
+border-radius: 10px;
+margin: 10px;
+
+list-style: none;
+ word-wrap: wrap;
+li{
+  background-color:color.$backColor;
+  align-items: center;
+text-align: center;
+font-weight: bold; 
+font-size: 16px; 
+
+background: #202020; 
+-webkit-background-clip: text; 
+-moz-background-clip: text; 
+background-clip: text; 
+color: transparent; 
+text-shadow: 0px 3px 3px rgba(255,255,255,0.4),0px -1px 1px rgba(0,0,0,0.3);
+border-radius: .625rem;
+
+  //mix-blend-mode: exclusion;
+  
+ // background-color: rgb(245, 226, 226);
+
+}
+  
+}
+.socila-ico{
+
+  display: flex;
+  flex-direction: column;
+  .ico{ 
+    
+    img{
+
+      
+      transition: all 400ms ease-in;
+      &:hover{
+        border-radius: 10%;
+        border: 10px solid color.$backColor;
+       transform: scale(1.1);
+  
+      }
+    }
+
+    
+  }
+}
+  .imagen {
+
+    width: 4em;
+    height: 4em;
+    margin: .5em;
+    overflow: hidden;
+    border-radius: 50%;
+
+
+  }
+
+  .imagen img {
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+
+  }
+
+
+  // &p {
+
+  //   color: rgb(199, 9, 9);
+  //   font-size: 2em;
+  //   box-shadow: 1px 1px 20px rgb(255, 0, 0);
+  //  display: flex;
+
+  //   flex-direction: column;
+
+  // }
+
+
+
+
+
+
+
+}
