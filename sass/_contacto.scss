@@ -4,17 +4,20 @@
 .contactoToogle{
     display: none;
     position: absolute;
-    font-weight: bold;
-    top: 1rem;
+   font-weight: bold;
+ font-size: 24PX;
+   top: 1rem;
     max-width: 400px;
+    
     padding: 10px;
     left: 12%;
     list-style: none;
     word-wrap: wrap;
-    background: right/ contain  no-repeat url('/img/gota.jpg') rgb(69, 121, 78);
+    background: left/ contain  repeat url('/img/ico/back2.svg'),rgb(90, 153, 106);
     border-radius: 2% 25px ;
     text-align: left;
-    color:color.$textColor;
+  // color: rgba(0, 0, 0, 0.877);
+    //color:color.$textColor;
     
 }
 .contactoActive{
