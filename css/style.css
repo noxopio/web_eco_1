@@ -50,11 +50,11 @@ span {
 
 #toogleMenu {
   position: sticky;
-  top: 20rem;
+  top: 15rem;
   left: 1%;
   height: 4em;
   width: 4rem;
-  z-index: 5;
+  z-index: 1;
   border-radius: 2px;
   background: #ffffff;
   box-shadow: 2px 2px 4px rgba(206, 201, 201, 0.9254901961), -2px -2px 4px #5f5d5d;
@@ -85,7 +85,7 @@ span {
   list-style-type: none;
   margin: 0;
   left: 1.5rem;
-  top: 25rem;
+  top: 20rem;
   padding: 0;
   border-radius: 50px 0 50px 0/70px 0 70px 0;
   gap: 0.5em;
@@ -225,14 +225,23 @@ span {
   font-weight: bold;
   font-size: 24PX;
   top: 1rem;
-  max-width: 400px;
+  width: 30vw;
   padding: 10px;
   left: 12%;
   list-style: none;
-  word-wrap: wrap;
+  flex-wrap: wrap;
   background: left/contain repeat url("/img/ico/back2.svg"), rgb(90, 153, 106);
   border-radius: 2% 25px;
   text-align: left;
+}
+.contactoToogle li {
+  word-wrap: wrap;
+}
+@media (270px <= width <= 1024px) {
+  .contactoToogle {
+    width: auto;
+    height: auto;
+  }
 }
 
 .contactoActive {
@@ -455,6 +464,13 @@ body {
   background-color: rgb(144, 196, 149);
   border-radius: 1%;
   box-shadow: inset 20px 20px 60px #d9d9d9, inset -20px -20px 60px #5ecf01;
+}
+
+.imagen_inicio {
+  border-radius: 100px 0 100px 0/100px 0 100px 0;
+  object-fit: contain;
+  margin: auto 25%;
+  max-width: 50%;
 }
 
 .gallery_hover {

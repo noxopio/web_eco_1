@@ -184,15 +184,15 @@ cursor: pointer;
     inset -20px -20px 60px #5ecf01;
 }
 
-// .imagen_inicio {
-//   padding: 4em;
-//   border-radius: 100px 0 100px 0 / 100px 0 100px 0;
-//   object-fit: cover;
-//   margin: auto 25%;
-//   width: 50%;
-//   height: 50%;
+.imagen_inicio {
+  
+  border-radius: 100px 0 100px 0 / 100px 0 100px 0;
+  object-fit: contain;
+  margin: auto 25%;
+  max-width: 50%;
 
-// }
+
+}
 
 // .gallery_hover {
 //   position: fixed;

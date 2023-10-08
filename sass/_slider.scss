@@ -9,8 +9,11 @@
     padding:1em;
     @include mixin.neo(1em,1em );
     overflow: hidden;
-  }
-  .carrousel .grande{
+
+  
+}
+.carrousel .grande{
+
     width: 500%;
     
     display: flex;
@@ -48,6 +51,3 @@
   .carrousel .punto.activo{
     background-color:color.$secondColor;
   }
-  
-  
-  
