@@ -9,7 +9,7 @@
     left: 1%;
     height: 4em;
     width: 4rem;
- 
+z-index: 5;
 
     @include mixin.neo(2px, 2px);
     background-image: url(/img/eco1.jpeg);
@@ -40,8 +40,8 @@
 
 
 .navMenu-ul {
-   
-    position:fixed;
+
+    position: fixed;
     max-width: 10%;
     list-style-type: none;
     margin: 0;
@@ -104,29 +104,26 @@
 
 .contenedor {
 
-   
+
     display: grid;
     place-content: center;
-    
-  
-   
     box-shadow: inset 20px 20px 60px #d9d9d9,
         inset -20px -20px 60px #ffffff;
-    margin-bottom: .5rem;
+    margin-bottom: 5rem;
     margin-left: 15%;
     margin-right: 10%;
     word-wrap: wrap;
-flex-basis:auto;
+    flex-basis: auto;
     object-fit: cover;
     height: auto;
     color: color.$textColor;
-   
+
 
     background-position: left top;
     background-attachment: fixed;
     @include mixin.neo(5px, 5px);
- background-color: rgba(148, 185, 154, 0.452);
-backdrop-filter: blur(10%);
+    background-color: rgba(224, 235, 225, 0.836);
+    backdrop-filter: blur(10%);
     border: solid 1px color.$secondColor;
     border-radius: 20px;
     align-items: center;
@@ -134,7 +131,7 @@ backdrop-filter: blur(10%);
     font-size: 24px;
 
     transition: all 400ms;
-   
+
     #titulo {
         text-align: center;
 
@@ -148,11 +145,15 @@ backdrop-filter: blur(10%);
         text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.4), 0px -1px 1px rgba(0, 0, 0, 0.3);
     }
 
-    #parrafo:hover{
-        background-color: color.$backColor;
-    
+    #parrafo {
+    margin-bottom: 1rem;
+
+border: solid 1px color.$secondColor;
+border-radius: 20px;
+
 
     }
+
     .photos {
         padding: .5em;
         border-radius: 100px 0 100px 0 / 100px 0 100px 0;
@@ -165,6 +166,7 @@ backdrop-filter: blur(10%);
 
     }
 }
-.activeContendor{
+
+.activeContendor {
     display: none;
 }

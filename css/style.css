@@ -54,6 +54,7 @@ span {
   left: 1%;
   height: 4em;
   width: 4rem;
+  z-index: 5;
   border-radius: 2px;
   background: #ffffff;
   box-shadow: 2px 2px 4px rgba(206, 201, 201, 0.9254901961), -2px -2px 4px #5f5d5d;
@@ -127,7 +128,7 @@ span {
   display: grid;
   place-content: center;
   box-shadow: inset 20px 20px 60px #d9d9d9, inset -20px -20px 60px #ffffff;
-  margin-bottom: 0.5rem;
+  margin-bottom: 5rem;
   margin-left: 15%;
   margin-right: 10%;
   word-wrap: wrap;
@@ -140,7 +141,7 @@ span {
   border-radius: 5px;
   background: #ffffff;
   box-shadow: 5px 5px 10px rgba(206, 201, 201, 0.9254901961), -5px -5px 10px #5f5d5d;
-  background-color: rgba(148, 185, 154, 0.452);
+  background-color: rgba(224, 235, 225, 0.836);
   backdrop-filter: blur(10%);
   border: solid 1px rgb(144, 196, 149);
   border-radius: 20px;
@@ -160,8 +161,10 @@ span {
   color: transparent;
   text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.4), 0px -1px 1px rgba(0, 0, 0, 0.3);
 }
-.contenedor #parrafo:hover {
-  background-color: rgba(132, 190, 132, 0.37);
+.contenedor #parrafo {
+  margin-bottom: 1rem;
+  border: solid 1px rgb(144, 196, 149);
+  border-radius: 20px;
 }
 .contenedor .photos {
   padding: 0.5em;
@@ -237,8 +240,8 @@ span {
 }
 
 #galeria {
-  background-image: url(/img/city.jpeg);
-  background-size: cover;
+  background: rgb(144, 196, 149);
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   position: absolute;
@@ -305,21 +308,61 @@ span {
   object-fit: cover;
 }
 
-.slider {
-  aspect-ratio: 10/10;
-  width: 300px;
-  position: relative;
-  display: flex;
-  overflow: scroll;
-  scroll-snap-type: 10px mandatory;
+.carrousel {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 40rem;
+  padding: 1em;
+  border-radius: 1em;
+  background: #ffffff;
+  box-shadow: 1em 1em 2em rgba(206, 201, 201, 0.9254901961), -1em -1em 2em #5f5d5d;
+  overflow: hidden;
 }
-.slider .slider img {
+
+.carrousel .grande {
+  width: 500%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 1em;
+  background: #ffffff;
+  box-shadow: 1em 1em 2em rgba(206, 201, 201, 0.9254901961), -1em -1em 2em #5f5d5d;
+  padding: 2rem;
+  transition: all 0.5s ease;
+  transform: translateX(0%);
+}
+
+.carrousel .img {
+  width: calc(20% - 5em);
+  min-height: 10vh;
+  border-radius: 1em;
+  background: #ffffff;
+  box-shadow: 1em 1em 2em rgba(206, 201, 201, 0.9254901961), -1em -1em 2em #5f5d5d;
+}
+
+.carrousel .puntos {
   width: 100%;
-  left: 0;
-  position: sticky;
-  object-fit: cover;
-  border-radius: 5px;
-  scroll-snap-align: center;
+  margin: 1em 0 0;
+  padding: 0.4em;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.carrousel .punto {
+  width: 2em;
+  height: 2em;
+  margin: 1em 1em 0;
+  border-radius: 1em;
+  background: #ffffff;
+  box-shadow: 1em 1em 2em rgba(206, 201, 201, 0.9254901961), -1em -1em 2em #5f5d5d;
+}
+
+.carrousel .punto.activo {
+  background-color: rgb(144, 196, 149);
 }
 
 * {
@@ -342,7 +385,7 @@ body {
 
 #overlay-text {
   overflow: hidden;
-  position: absolute;
+  position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -397,6 +440,9 @@ body {
     writing-mode: vertical-lr;
     text-orientation: upright;
   }
+  #overlay-text .titleOver {
+    font-size: 4rem;
+  }
 }
 .hidden {
   display: hide;
@@ -409,15 +455,6 @@ body {
   background-color: rgb(144, 196, 149);
   border-radius: 1%;
   box-shadow: inset 20px 20px 60px #d9d9d9, inset -20px -20px 60px #5ecf01;
-}
-
-.imagen_inicio {
-  padding: 4em;
-  border-radius: 100px 0 100px 0/100px 0 100px 0;
-  object-fit: cover;
-  margin: auto 25%;
-  width: 50%;
-  height: 50%;
 }
 
 .gallery_hover {

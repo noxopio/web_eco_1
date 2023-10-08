@@ -1,22 +1,53 @@
-.slider{
+@use 'color';
+@use 'mixin';
 
-
-    aspect-ratio: 10/10;
-    width: 300px;
-    position: relative;
+.carrousel{
+    
+    margin:  0 auto;
+    width:90%;
+    max-width: 40rem;
+    padding:1em;
+    @include mixin.neo(1em,1em );
+    overflow: hidden;
+  }
+  .carrousel .grande{
+    width: 500%;
+    
     display: flex;
-    overflow: scroll;
-    scroll-snap-type: 10px mandatory;
-
-
-.slider img{
-
-width: 100%;
-left: 0;
-position: sticky;
-object-fit: cover;
-border-radius: 5px;
-scroll-snap-align: center;
-
-}
-}
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    @include mixin.neo(1em,1em );
+    padding:2rem;
+  
+  
+    transition: all .5s ease;
+    transform: translateX(0%);
+  }
+  .carrousel .img{
+    width: calc( 100% / 5 - 5em);
+    min-height: 10vh;
+    @include mixin.neo(1em,1em );
+  }
+  .carrousel .puntos{
+    width:100%;
+    margin:1em 0 0;
+    padding:.4em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+  }
+  .carrousel .punto{
+    width:  2em;
+    height: 2em;
+    margin: 1em 1em 0;
+    @include mixin.neo(1em,1em );
+  }
+  .carrousel .punto.activo{
+    background-color:color.$secondColor;
+  }
+  
+  
+  
