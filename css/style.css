@@ -80,8 +80,7 @@ span {
 }
 
 .navMenu-ul {
-  position: fixed;
-  max-width: 10%;
+  position: sticky;
   list-style-type: none;
   margin: 0;
   left: 1.5rem;
@@ -89,11 +88,11 @@ span {
   padding: 0;
   border-radius: 50px 0 50px 0/70px 0 70px 0;
   gap: 0.5em;
-  z-index: 1;
+  z-index: 2;
   font-size: 1rem;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: space-around;
   text-align: center;
