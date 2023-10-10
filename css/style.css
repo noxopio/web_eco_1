@@ -367,6 +367,11 @@ span {
   border-radius: 1em;
   background: #ffffff;
   box-shadow: 1em 1em 2em rgba(206, 201, 201, 0.9254901961), -1em -1em 2em #5f5d5d;
+  transition: all 400ms ease-in-out;
+}
+.carrousel .punto:hover {
+  background-color: rgb(245, 116, 0);
+  transform: scale(1.5);
 }
 
 .carrousel .punto.activo {
@@ -504,6 +509,7 @@ body {
 #name {
   margin: 0 auto;
   width: 10%;
+  padding: 2px;
   text-align: center;
   display: block;
   text-align: center;
@@ -513,6 +519,7 @@ body {
   /*   border-right: 4px solid ; */
   animation: typing 5s steps(60), blink 0.5s infinite step-end alternate;
   overflow: hidden;
+  margin-top: 1rem;
   border-radius: 2px;
   background: #ffffff;
   box-shadow: 2px 2px 4px rgba(206, 201, 201, 0.9254901961), -2px -2px 4px #5f5d5d;

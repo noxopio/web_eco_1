@@ -41,13 +41,22 @@
     justify-content: center;
     align-items: center;
     list-style: none;
+ 
   }
   .carrousel .punto{
     width:  2em;
     height: 2em;
     margin: 1em 1em 0;
     @include mixin.neo(1em,1em );
+    transition: all 400ms ease-in-out ;
+
+    &:hover{
+      background-color:color.$fourColor;
+    transform: scale(1.5);
+        }
+
   }
   .carrousel .punto.activo{
     background-color:color.$secondColor;
   }
+ 

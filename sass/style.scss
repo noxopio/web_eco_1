@@ -272,12 +272,14 @@ cursor: pointer;
 a{
   color: transparent;
 text-decoration: none;
+
 }
   margin: 0 auto;
   width: 10%;
+  padding: 2px;
   text-align: center;
   @include mixin.tiping(10ch);
-
+    margin-top: 1rem;
   @include mixin.neo(2px,2px);
   font-weight: bold; 
 font-size: 30px; 
