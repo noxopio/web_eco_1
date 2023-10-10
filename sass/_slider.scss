@@ -9,6 +9,7 @@
     padding:1em;
     @include mixin.neo(1em,1em );
     overflow: hidden;
+    
 
   
 }
@@ -23,14 +24,23 @@
     @include mixin.neo(1em,1em );
     padding:2rem;
   
-  
-    transition: all .5s ease;
-    transform: translateX(0%);
+
+    .text {
+      background-color: #04AA6D;
+      color: white;
+      font-size: 16px;
+      padding: 16px 32px;
+    }
+ 
   }
   .carrousel .img{
     width: calc( 100% / 5 - 5em);
     min-height: 10vh;
     @include mixin.neo(1em,1em );
+
+
+   
+ 
   }
   .carrousel .puntos{
     width:100%;
@@ -59,4 +69,9 @@
   .carrousel .punto.activo{
     background-color:color.$secondColor;
   }
- 
+ ////
+ /// 
+ /// 
+ /// 
+ /// 
+ /// 

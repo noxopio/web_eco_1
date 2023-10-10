@@ -340,8 +340,12 @@ span {
   background: #ffffff;
   box-shadow: 1em 1em 2em rgba(206, 201, 201, 0.9254901961), -1em -1em 2em #5f5d5d;
   padding: 2rem;
-  transition: all 0.5s ease;
-  transform: translateX(0%);
+}
+.carrousel .grande .text {
+  background-color: #04AA6D;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
 }
 
 .carrousel .img {
