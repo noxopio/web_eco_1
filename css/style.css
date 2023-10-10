@@ -87,14 +87,14 @@ span {
   top: 20rem;
   padding: 0;
   border-radius: 50px 0 50px 0/70px 0 70px 0;
-  gap: 0.5em;
+  gap: 0.2em;
   z-index: 2;
   font-size: 1rem;
   flex-wrap: wrap;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   text-align: center;
   transition: all ease 400ms;
 }
@@ -222,19 +222,22 @@ span {
   display: none;
   position: absolute;
   font-weight: bold;
-  font-size: 24PX;
-  top: 1rem;
-  width: 30vw;
-  padding: 10px;
-  left: 12%;
+  font-size: 1.2rem;
+  top: 2.8rem;
+  min-height: 30vh;
+  flex-basis: 30vw;
+  left: 6%;
   list-style: none;
+  word-wrap: wrap;
   flex-wrap: wrap;
-  background: left/contain repeat url("/img/ico/back2.svg"), rgb(90, 153, 106);
+  background: right/contain repeat url("/img/ico/back2.svg"), rgb(90, 153, 106);
   border-radius: 2% 25px;
   text-align: left;
 }
 .contactoToogle li {
-  word-wrap: wrap;
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
 }
 @media (270px <= width <= 1024px) {
   .contactoToogle {

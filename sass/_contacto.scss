@@ -1,36 +1,43 @@
 @use 'mixin';
 @use 'color';
 
-.contactoToogle{
-    display: none;
-    position: absolute;
-   font-weight: bold;
- font-size: 24PX;
-   top: 1rem;
-width:  30vw;    
-    padding: 10px;
-    left: 12%;
-    list-style: none;
-   flex-wrap: wrap;
-    background: left/ contain  repeat url('/img/ico/back2.svg'),rgb(90, 153, 106);
-    border-radius: 2% 25px ;
-    text-align: left;
+.contactoToogle {
+  display: none;
+  position: absolute;
+  font-weight: bold;
+  font-size: 1.2rem;
+  top: 2.8rem;
+  min-height: 30vh;
+  flex-basis:30vw;
+ 
+  left: 6%;
+  list-style: none;
+  word-wrap: wrap;
+  flex-wrap: wrap;
+  background: right/ contain repeat url('/img/ico/back2.svg'), rgb(90, 153, 106);
+  border-radius: 2% 25px;
+  text-align: left;
 
-    li{
-      word-wrap: wrap;
-    }
-    @media (270px <= width<=1024px) { 
-width: auto;
-height: auto;
-
-    }
-  // color: rgba(0, 0, 0, 0.877);
-    //color:color.$textColor;
+  li {
+margin: 10px;
+    display: flex;
     
+    justify-content:space-between;
+
+  }
+
+  @media (270px <=width<=1024px) {
+    width: auto;
+    height: auto;
+
+  }
+
+  // color: rgba(0, 0, 0, 0.877);
+  //color:color.$textColor;
+
 }
-.contactoActive{
 
-    display: block;
+.contactoActive {
+
+  display: block;
 }
-
-
