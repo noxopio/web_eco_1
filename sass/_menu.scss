@@ -22,9 +22,9 @@ z-index: 1;
     border-radius: 10PX;
     align-content: center;
     justify-content: center;
-
+transform: scale(1);
     color: color.$textColor;
-    transition: all ease-in 400ms;
+    transition: ease-in 400ms;
 
     &:hover {
         transform: scale(1.1);
@@ -32,6 +32,34 @@ z-index: 1;
 
 
     }
+
+
+
+animation: 2s toogleMenu 8s  ease;
+
+
+@keyframes toogleMenu  {
+
+    0% {
+    
+      
+     transform: scale(0.5);
+        
+    }
+  
+    95% {
+      transform: scale(1.5);      
+    }
+  
+    100% {
+        transform: scale(1);
+      
+       
+    }
+  
+  
+  }
+   
 }
 
 .activeNav {

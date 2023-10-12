@@ -67,12 +67,25 @@ span {
   border-radius: 10PX;
   align-content: center;
   justify-content: center;
+  transform: scale(1);
   color: rgb(22, 26, 37);
-  transition: all ease-in 400ms;
+  transition: ease-in 400ms;
+  animation: 2s toogleMenu 8s ease;
 }
 #toogleMenu:hover {
   transform: scale(1.1);
   box-shadow: 1px 1px rgb(245, 116, 0);
+}
+@keyframes toogleMenu {
+  0% {
+    transform: scale(0.5);
+  }
+  95% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .activeNav {
@@ -110,10 +123,10 @@ span {
 }
 
 .navMenu-li a.active {
-  border: solid 2px rgb(144, 196, 149);
+  border: solid 2px #90c495;
   border-radius: 50px 0 50px 0/70px 0 70px 0;
   width: auto;
-  color: rgb(144, 196, 149);
+  color: #90c495;
   box-shadow: inset 30px 30px 90px #ffffff, inset -30px -30px 90px #463d3d;
 }
 
@@ -142,7 +155,7 @@ span {
   box-shadow: 5px 5px 10px rgba(206, 201, 201, 0.9254901961), -5px -5px 10px #5f5d5d;
   background-color: rgba(224, 235, 225, 0.836);
   backdrop-filter: blur(10%);
-  border: solid 1px rgb(144, 196, 149);
+  border: solid 1px #90c495;
   border-radius: 20px;
   align-items: center;
   text-align: center;
@@ -162,7 +175,7 @@ span {
 }
 .contenedor #parrafo {
   margin-bottom: 1rem;
-  border: solid 1px rgb(144, 196, 149);
+  border: solid 1px #90c495;
   border-radius: 20px;
 }
 .contenedor .photos {
@@ -181,24 +194,36 @@ span {
 /* The hero image */
 .hero-image {
   position: relative;
-  cursor: pointer;
+  cursor: row;
   min-width: 100vw;
   height: 250px;
-  background-image: url("/img/hero.jpeg");
   background-repeat: repeat;
   background-position: center;
   background-size: cover;
 }
 .hero-image img {
   position: absolute;
+  cursor: pointer;
   left: 2rem;
   margin: 10px auto;
   border-radius: 50%;
   width: 8vw;
   transition: all ease-out 400ms;
+  animation: 2s toogleMenu 6s ease;
 }
 .hero-image img:hover {
   transform: scale(1.1);
+}
+@keyframes toogleMenu {
+  0% {
+    transform: scale(0.5);
+  }
+  95% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 /* Place text in the middle of the image */
@@ -210,12 +235,14 @@ span {
 }
 .hero-text h1 {
   margin-top: 100px;
-  background-color: #000000;
+  font-size: 6rem;
+  font-weight: bold;
+  cursor: none;
+  background: linear-gradient(90deg, rgb(0, 0, 0) 3%, rgba(92, 251, 63, 0.9332107843) 27%, rgba(248, 248, 248, 0.925) 50%, rgb(4, 211, 15) 71%, rgba(55, 236, 167, 0.622) 86%);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
   color: transparent;
-  text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.4), 0px -1px 1px rgba(0, 0, 0, 0.3);
 }
 
 .contactoToogle {
@@ -251,7 +278,7 @@ span {
 }
 
 #galeria {
-  background: rgb(144, 196, 149);
+  background: #90c495;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -357,6 +384,7 @@ span {
 }
 
 .carrousel .puntos {
+  cursor: pointer;
   width: 100%;
   margin: 1em 0 0;
   padding: 0.4em;
@@ -382,7 +410,7 @@ span {
 }
 
 .carrousel .punto.activo {
-  background-color: rgb(144, 196, 149);
+  background-color: #90c495;
 }
 
 * {
@@ -396,7 +424,7 @@ body {
   padding-bottom: 15rem;
   min-height: 100vh;
   scroll-behavior: smooth;
-  background: rgb(231, 233, 232) left/cover no-repeat url("/img/eco2.jpeg");
+  background: rgb(224, 224, 224) right/cover no-repeat url("/img/environmental-protection-326923_1280.jpg");
   background-position: right center;
   background-attachment: fixed;
   max-width: 100%;
@@ -413,12 +441,26 @@ body {
   min-height: 100vh;
   top: 50%;
   left: 50%;
-  background: url("/img/mano.jpeg"), rgb(144, 196, 149);
+  background: url("/img/mano.jpeg"), #90c495;
   background-size: contain;
   background-repeat: no-repeat;
   z-index: 3;
   cursor: pointer;
   transform: translate(-50%, -50%);
+  animation: 8s overlayStop ease-in-out forwards;
+}
+@keyframes overlayStop {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    visibility: hidden;
+  }
 }
 #overlay-text .titleOver {
   text-align: center;
@@ -472,7 +514,7 @@ body {
 /* Estilos para la galería */
 .backjas {
   text-align: center;
-  background-color: rgb(144, 196, 149);
+  background-color: #90c495;
   border-radius: 1%;
   box-shadow: inset 20px 20px 60px #d9d9d9, inset -20px -20px 60px #5ecf01;
 }
@@ -482,35 +524,6 @@ body {
   object-fit: contain;
   margin: auto 25%;
   max-width: 50%;
-}
-
-.gallery_hover {
-  top: 10rem;
-  display: flex;
-  flex-direction: row;
-  left: 10%;
-  margin: 1rem auto 2rem auto;
-  height: auto;
-  width: 40vw;
-  z-index: 5;
-}
-.gallery_hover img {
-  border-radius: 20%;
-  width: 0;
-  flex-grow: 1;
-  object-fit: cover;
-  opacity: 60%;
-  transition: 0.5s ease;
-}
-.gallery_hover :hover {
-  cursor: crosshair;
-  width: 20vw;
-  opacity: 1;
-  z-index: 5;
-  transform: scale3d(1, 1.2, 0.2);
-  border: 2px solid blueviolet;
-  box-shadow: 2px 2px 10px blueviolet;
-  filter: contrast(120%);
 }
 
 #name {

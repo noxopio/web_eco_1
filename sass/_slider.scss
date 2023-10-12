@@ -9,8 +9,34 @@
     padding:1em;
     @include mixin.neo(1em,1em );
     overflow: hidden;
+    // transform: scale(1);
+    // visibility: hidden;
     
+    // animation: 400ms carrusel 8s  ease-in-out forwards;
 
+
+    // @keyframes carrusel  {
+    
+    //     0% {
+        
+    //     visibility: visible;
+        
+    //     transform: scale(0.5);
+        
+    //   }
+      
+ 
+      
+    //   100% {
+        
+    //     visibility: visible;
+    //       transform: translateX(.9);
+          
+           
+    //     }
+      
+      
+    //   }
   
 }
 .carrousel .grande{
@@ -43,6 +69,7 @@
  
   }
   .carrousel .puntos{
+    cursor: pointer;
     width:100%;
     margin:1em 0 0;
     padding:.4em;
@@ -70,7 +97,6 @@
     background-color:color.$secondColor;
   }
  ////
- /// 
  /// 
  /// 
  /// 
