@@ -296,29 +296,33 @@ text-decoration: none;
   width: 10%;
   padding: 2px;
   text-align: center;
-  @include mixin.tiping(10ch);
+   @include mixin.tiping(10ch);
+   border-right: 10px solid;
     margin-top: 1rem;
-  @include mixin.neo(2px,2px);
+ // @include mixin.neo(2px,2px);
   font-weight: bold; 
-font-size: 30px; 
-background:#242424; 
+font-size: 2rem; 
+background: color.$secondColor; 
 -webkit-background-clip: text; 
 -moz-background-clip: text; 
 background-clip: text; 
-color: transparent; 
-text-shadow: 0px 3px 3px rgba(255,255,255,0.4),0px -1px 1px rgba(0,0,0,0.3);
-border-color:#ff0000 ;
+// color: transparent; 
+// text-shadow: 0px 3px 3px rgba(255,255,255,0.4),0px -1px 1px rgba(0,0,0,0.3);
+// border-color:#ff0000 ;
 &:hover{
-  font-size: 30px; 
-  color: #becfbc; 
-  text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 0 #acacac, 0 6px 1px rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);
+  font-size:2.1rem; 
+  color:color.$fourColor; 
+  text-shadow: 0 1px 0 #dddada, 0 2px 0 color.$fourColor, 0 3px 0 color.$fourColor, 0 4px 0 color.$fourColor, 0 5px 0 color.$fourColor, 0 6px 1px rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);
   
 
 }
 }
 
 
+.tiping{
 
+  @include mixin.tiping(10ch);
+}
 
 // @media (270px <= width<=1024px) {
 //   body{

@@ -4,39 +4,49 @@
 .carrousel{
     
     margin:  0 auto;
-    width:90%;
+    width: 90%;
     max-width: 40rem;
     padding:1em;
     @include mixin.neo(1em,1em );
     overflow: hidden;
-    // transform: scale(1);
-    // visibility: hidden;
+    display: grid;
+    place-content: center;
     
-    // animation: 400ms carrusel 8s  ease-in-out forwards;
+    transform: scale(1);
+    visibility: hidden;
+    
+    animation: 400ms carrusel 6s  ease-in-out forwards;
 
 
-    // @keyframes carrusel  {
+    @keyframes carrusel  {
     
-    //     0% {
+        0% {
         
-    //     visibility: visible;
+        visibility: visible;
         
-    //     transform: scale(0.5);
+        transform: scale(0.5);
         
-    //   }
+      }
+        50% {
+        
+        visibility: visible;
+        
+        transform: scale(0.6);
+        
+      }
       
  
       
-    //   100% {
+      100% {
         
-    //     visibility: visible;
-    //       transform: translateX(.9);
+        visibility: visible;
+          transform: translateX(1);
           
            
-    //     }
+        }
       
       
-    //   }
+      }
   
 }
 .carrousel .grande{
@@ -45,10 +55,10 @@
     
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     @include mixin.neo(1em,1em );
-    padding:2rem;
+    padding:1rem;
   
 
     .text {
@@ -59,16 +69,20 @@
     }
  
   }
-  .carrousel .img{
-    width: calc( 100% / 5 - 5em);
+
+  .carrousel .image{
+    width: calc( 100% / 2 - 2rem);
     min-height: 10vh;
     @include mixin.neo(1em,1em );
+
+
 
 
    
  
   }
   .carrousel .puntos{
+  
     cursor: pointer;
     width:100%;
     margin:1em 0 0;
@@ -78,12 +92,14 @@
     justify-content: center;
     align-items: center;
     list-style: none;
- 
+   
+
   }
   .carrousel .punto{
     width:  2em;
     height: 2em;
     margin: 1em 1em 0;
+    
     @include mixin.neo(1em,1em );
     transition: all 400ms ease-in-out ;
 
@@ -101,3 +117,73 @@
  /// 
  /// 
  /// 
+  .container__image {
+ position: relative;
+ width: 50%;
+
+ 
+}
+
+// .image {
+//  display: block;
+//  width: 100%;
+//  height: auto;
+// }
+
+.content__text_overlay {
+ position: absolute;
+ top: 0;
+ bottom: 0;
+ left: 0;
+ right: 0;
+
+ width: calc( 100% / 2 - 2rem);
+  min-height: 10vh;
+
+
+
+
+
+ opacity: 0;
+ transition: .6s ease-in-out;
+ background-color: #008CBA;
+}
+
+
+
+
+.container__image:hover .content__text_overlay {
+
+  width: calc( 100% / 2 - 2rem);
+  word-wrap: wrap;
+  text-align: center;
+
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  right: 0;
+
+
+  z-index: -1;
+ 
+  min-height: auto;
+border-radius: 6%;
+
+ opacity: 1;
+}
+
+.text__overlaly {
+ 
+
+ color: white;
+ font-size: 16px;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ -webkit-transform: translate(-50%, -50%);
+ -ms-transform: translate(-50%, -50%);
+ transform: translate(-50%, -50%);
+ text-align: center;
+
+
+}

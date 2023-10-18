@@ -62,20 +62,30 @@
 
 /* Place text in the middle of the image */
 .hero-text {
+
   display: flex;
   flex-direction: column;
+
   
   justify-content:space-around;
-  text-align: center;    
+  text-align: center; 
+    
+       
 
   
   h1{
-    margin-top: 100px;
+    
+    margin-top: 10px;
     font-size: 4rem;
     font-weight: bold;
-    cursor:none;
+    
     background:linear-gradient(90deg, rgb(0, 0, 0) 3%, rgba(92,251,63,0.9332107843137255) 27%, rgba(248, 248, 248, 0.925) 50%, rgb(4, 211, 15) 71%, rgba(55, 236, 167, 0.622) 86%);
-  
+    animation-name: heroText;
+    animation-duration: 400ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 6S;
+    
 
 
  
@@ -90,4 +100,33 @@ color: transparent;
   }
 
   
+  @keyframes heroText  {
+    
+    0% {
+    
+      transform: translateX(60%);
+      
+      
+    }
+    
+    95% {
+      
+      transform: translateX(30%);
+      transform: scale(1.5);      
+    }
+  
+    100% {
+      transform: translateX(0%);
+      transform: scale(1); 
+      
+       
+    }
+  
+  
+  }
+
+
+
+
+
 }

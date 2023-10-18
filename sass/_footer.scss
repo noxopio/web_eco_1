@@ -26,33 +26,46 @@ bottom: 0;
   font-size: 1rem;
 flex-grow: 2;
 
+
 .contacto{
  
 font-size: 16px;
 font-style:italic;
 border-radius: 10px;
 margin: 10px;
+background: left/ contain repeat url('/img/ico/back2.svg'), rgb(90, 153, 106);
+
+padding: 20px;
 
 list-style: none;
  word-wrap: wrap;
 li{
-  background-color:color.$backColor;
+ // background-color:color.$backColor;
   align-items: center;
 text-align: center;
 font-weight: bold; 
 font-size: 16px; 
 
-background: #202020; 
--webkit-background-clip: text; 
--moz-background-clip: text; 
-background-clip: text; 
-color: transparent; 
-text-shadow: 0px 3px 3px rgba(255,255,255,0.4),0px -1px 1px rgba(0,0,0,0.3);
-border-radius: .625rem;
+color:color.$textColor;
+
+
+
+
+//efecto bajo relieve
+
+// background: #202020; 
+// -webkit-background-clip: text; 
+// -moz-background-clip: text; 
+// background-clip: text; 
+// color: transparent; 
+// text-shadow: 0px 3px 3px rgba(255,255,255,0.4),0px -1px 1px rgba(0,0,0,0.3);
+// border-radius: .625rem;
 
   //mix-blend-mode: exclusion;
   
  // background-color: rgb(245, 226, 226);
+
+
 
 }
   
@@ -66,12 +79,15 @@ border-radius: .625rem;
     img{
 
       
+      
       transition: all 400ms ease-in;
       &:hover{
         border-radius: 10%;
         border: 10px solid color.$backColor;
        transform: scale(1.1);
   
+
+       
       }
     }
 
@@ -85,6 +101,7 @@ border-radius: .625rem;
     margin: .5em;
     overflow: hidden;
     border-radius: 50%;
+  
 
 
   }

@@ -19,20 +19,6 @@ function of() {
 
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     imagenes.forEach(function(ruta) {
         let imagen = document.createElement("div");
         imagen.className = "imagen";
@@ -46,13 +32,6 @@ function of() {
     });
 
 
-
-
-
-
-
-
-
 let enlaces = document.querySelectorAll('a');
 let tituloElemento = document.getElementById('titulo');
 let subTituloElemento = document.getElementById('subtitulo');
@@ -64,16 +43,28 @@ let navBarMenu =document.getElementById('navMenu');
 let contenidoToogle= document.querySelector('.contenedor');
 let contacToogle=document.querySelector('#toogleContacto');
 let infoBoton=document.querySelector('.contactoToogle');
+let close = document.querySelector('#close');
+
+
 
 menuButon.addEventListener('click',toogleMenu);
  function toogleMenu (){
-
+  
    navBarMenu.classList.toggle('activeNav');
 contenidoToogle.classList.toggle('activeContendor');
 
 
+
  }
 
+ close.addEventListener('click', ()=>{
+    navBarMenu.classList.toggle('activeNav');
+    
+    contenidoToogle.classList.toggle('activeContendor');
+
+    
+    
+})
 
 contacToogle.addEventListener('click',info);
 function info (){
@@ -83,40 +74,33 @@ infoBoton.classList.toggle('contactoActive');
 }
 
 
-
 enlaces.forEach(function (enlace) {
     
     enlace.addEventListener('click', function () {
         enlaces.forEach(function (enlace) {
-
-    
-
             enlace.classList.remove('active');
-
-        });
+            
+            
+                });
         contenidoToogle.classList.toggle('activeContendor');
-        navBarMenu.classList.toggle('activeNav');
-        this.classList.add('active')
-          
     
+       
+        
+       
+        navBarMenu.classList.toggle('activeNav');
+
+        this.classList.add('active')
+        
 
         let contenido= obtenerContenido (this.textContent)
-       
         tituloElemento.innerHTML=contenido.titulo
         subTituloElemento.innerHTML=contenido.subtitulo
         precioElemento.innerHTML=contenido.precio
         parrafoElemento.innerHTML=contenido.parrafo
         photoElemento.innerHTML= contenido.photo
-    
-        
-
-
+         
     })
 })
-
-
-
-
 
 // get information
 
@@ -157,6 +141,10 @@ const img = document.querySelectorAll('.img')
     // AÑADIR la clase activo al punto que hemos hecho CLICK
 
 // Recorrer TODOS los punto
+
+
+
+
 punto.forEach( ( cadaPunto , i )=> {
     // Asignamos un CLICK a cadaPunto
     punto[i].addEventListener('click',()=>{

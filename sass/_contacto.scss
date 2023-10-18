@@ -9,16 +9,43 @@
   top: 2.8rem;
   min-height: 30vh;
   flex-basis:30vw;
- 
+opacity: .6;
   left: 6%;
   list-style: none;
   word-wrap: wrap;
   flex-wrap: wrap;
-  background: right/ contain repeat url('/img/ico/back2.svg'), rgb(90, 153, 106);
+  background: right/ cover repeat url('/img/ico/back2.svg'), rgb(90, 153, 106);
   border-radius: 2% 25px;
   text-align: left;
+  cursor: pointer;
+  
+ 
+  animation: contacto;
+  animation-duration: 10s;
+  animation-timing-function:ease-in-out;
+ 
+@keyframes contacto {
+
+  0%{
 
 
+opacity: 1;
+  }
+  50%{
+   opacity: 0.8;
+  }
+  80%{
+ 
+    opacity: 0.5;
+  }
+ 100%{
+ 
+opacity: .2;
+  }
+  
+}
+
+ 
 
 
 
@@ -38,10 +65,14 @@ margin: 10px;
 
   // color: rgba(0, 0, 0, 0.877);
   //color:color.$textColor;
-
+  &:hover{
+    opacity: 1;
+  } 
 }
 
 .contactoActive {
 
   display:block;
+ 
+
 } 

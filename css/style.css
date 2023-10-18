@@ -148,6 +148,7 @@ span {
   object-fit: cover;
   height: auto;
   color: rgb(22, 26, 37);
+  opacity: 0;
   background-position: left top;
   background-attachment: fixed;
   border-radius: 5px;
@@ -160,7 +161,37 @@ span {
   align-items: center;
   text-align: center;
   font-size: 24px;
-  transition: all 400ms;
+  animation-name: content;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  animation-delay: 100ms;
+}
+@keyframes content {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%) scale(0.2);
+  }
+  50% {
+    opacity: 0.3;
+    transform: translateY(-50%) scale(0.4);
+  }
+  70% {
+    opacity: 0.5;
+    transform: translateY(0%) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%) scale(1);
+  }
+}
+.contenedor #close {
+  display: flex;
+  direction: column;
+  margin: 15px;
+  align-items: start;
+  justify-content: start;
 }
 .contenedor #titulo {
   text-align: center;
@@ -189,6 +220,32 @@ span {
 
 .activeContendor {
   display: none;
+}
+
+.salida {
+  animation-name: salida;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+}
+@keyframes salida {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%) scale(0.2);
+  }
+  50% {
+    opacity: 0.3;
+    transform: translateY(-50%) scale(0.4);
+  }
+  70% {
+    opacity: 0.5;
+    transform: translateY(0%) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%) scale(1);
+  }
 }
 
 /* The hero image */
@@ -234,15 +291,32 @@ span {
   text-align: center;
 }
 .hero-text h1 {
-  margin-top: 100px;
+  margin-top: 10px;
   font-size: 4rem;
   font-weight: bold;
-  cursor: none;
   background: linear-gradient(90deg, rgb(0, 0, 0) 3%, rgba(92, 251, 63, 0.9332107843) 27%, rgba(248, 248, 248, 0.925) 50%, rgb(4, 211, 15) 71%, rgba(55, 236, 167, 0.622) 86%);
+  animation-name: heroText;
+  animation-duration: 400ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 6S;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+@keyframes heroText {
+  0% {
+    transform: translateX(60%);
+  }
+  95% {
+    transform: translateX(30%);
+    transform: scale(1.5);
+  }
+  100% {
+    transform: translateX(0%);
+    transform: scale(1);
+  }
 }
 
 .contactoToogle {
@@ -253,13 +327,32 @@ span {
   top: 2.8rem;
   min-height: 30vh;
   flex-basis: 30vw;
+  opacity: 0.6;
   left: 6%;
   list-style: none;
   word-wrap: wrap;
   flex-wrap: wrap;
-  background: right/contain repeat url("/img/ico/back2.svg"), rgb(90, 153, 106);
+  background: right/cover repeat url("/img/ico/back2.svg"), rgb(90, 153, 106);
   border-radius: 2% 25px;
   text-align: left;
+  cursor: pointer;
+  animation: contacto;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+}
+@keyframes contacto {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.2;
+  }
 }
 .contactoToogle li {
   margin: 10px;
@@ -271,6 +364,9 @@ span {
     width: auto;
     height: auto;
   }
+}
+.contactoToogle:hover {
+  opacity: 1;
 }
 
 .contactoActive {
@@ -304,22 +400,17 @@ span {
   font-style: italic;
   border-radius: 10px;
   margin: 10px;
+  background: left/contain repeat url("/img/ico/back2.svg"), rgb(90, 153, 106);
+  padding: 20px;
   list-style: none;
   word-wrap: wrap;
 }
 #galeria .contacto li {
-  background-color: rgba(132, 190, 132, 0.37);
   align-items: center;
   text-align: center;
   font-weight: bold;
   font-size: 16px;
-  background: #202020;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.4), 0px -1px 1px rgba(0, 0, 0, 0.3);
-  border-radius: 0.625rem;
+  color: rgb(22, 26, 37);
 }
 #galeria .socila-ico {
   display: flex;
@@ -355,18 +446,37 @@ span {
   background: #ffffff;
   box-shadow: 1em 1em 2em rgba(206, 201, 201, 0.9254901961), -1em -1em 2em #5f5d5d;
   overflow: hidden;
+  display: grid;
+  place-content: center;
+  transform: scale(1);
+  visibility: hidden;
+  animation: 400ms carrusel 6s ease-in-out forwards;
+}
+@keyframes carrusel {
+  0% {
+    visibility: visible;
+    transform: scale(0.5);
+  }
+  50% {
+    visibility: visible;
+    transform: scale(0.6);
+  }
+  100% {
+    visibility: visible;
+    transform: translateX(1);
+  }
 }
 
 .carrousel .grande {
   width: 500%;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   border-radius: 1em;
   background: #ffffff;
   box-shadow: 1em 1em 2em rgba(206, 201, 201, 0.9254901961), -1em -1em 2em #5f5d5d;
-  padding: 2rem;
+  padding: 1rem;
 }
 .carrousel .grande .text {
   background-color: #04AA6D;
@@ -375,8 +485,8 @@ span {
   padding: 16px 32px;
 }
 
-.carrousel .img {
-  width: calc(20% - 5em);
+.carrousel .image {
+  width: calc(50% - 2rem);
   min-height: 10vh;
   border-radius: 1em;
   background: #ffffff;
@@ -411,6 +521,50 @@ span {
 
 .carrousel .punto.activo {
   background-color: #90c495;
+}
+
+.container__image {
+  position: relative;
+  width: 50%;
+}
+
+.content__text_overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: calc(50% - 2rem);
+  min-height: 10vh;
+  opacity: 0;
+  transition: 0.6s ease-in-out;
+  background-color: #008CBA;
+}
+
+.container__image:hover .content__text_overlay {
+  width: calc(50% - 2rem);
+  word-wrap: wrap;
+  text-align: center;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  right: 0;
+  z-index: -1;
+  min-height: auto;
+  border-radius: 6%;
+  opacity: 1;
+}
+
+.text__overlaly {
+  color: white;
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 * {
@@ -470,7 +624,6 @@ body {
   width: 10ch;
   text-transform: uppercase;
   white-space: nowrap;
-  /*   border-right: 4px solid ; */
   animation: typing 5s steps(60), blink 0.5s infinite step-end alternate;
   overflow: hidden;
   mix-blend-mode: exclusion;
@@ -484,13 +637,13 @@ body {
 }
 @keyframes typing {
   from {
-    color: white;
+    color: rgb(5, 5, 5);
     width: 0;
   }
 }
 @keyframes blink {
   50% {
-    border-color: transparent;
+    border-color: rgb(245, 116, 0);
   }
 }
 
@@ -536,22 +689,16 @@ body {
   width: 10ch;
   text-transform: uppercase;
   white-space: nowrap;
-  /*   border-right: 4px solid ; */
   animation: typing 5s steps(60), blink 0.5s infinite step-end alternate;
   overflow: hidden;
+  border-right: 10px solid;
   margin-top: 1rem;
-  border-radius: 2px;
-  background: #ffffff;
-  box-shadow: 2px 2px 4px rgba(206, 201, 201, 0.9254901961), -2px -2px 4px #5f5d5d;
   font-weight: bold;
-  font-size: 30px;
-  background: #242424;
+  font-size: 2rem;
+  background: #90c495;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
-  color: transparent;
-  text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.4), 0px -1px 1px rgba(0, 0, 0, 0.3);
-  border-color: #ff0000;
 }
 #name a {
   color: transparent;
@@ -559,19 +706,40 @@ body {
 }
 @keyframes typing {
   from {
-    color: white;
+    color: rgb(5, 5, 5);
     width: 0;
   }
 }
 @keyframes blink {
   50% {
-    border-color: transparent;
+    border-color: rgb(245, 116, 0);
   }
 }
 #name:hover {
-  font-size: 30px;
-  color: #becfbc;
-  text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 0 #acacac, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
+  font-size: 2.1rem;
+  color: rgb(245, 116, 0);
+  text-shadow: 0 1px 0 #dddada, 0 2px 0 rgb(245, 116, 0), 0 3px 0 rgb(245, 116, 0), 0 4px 0 rgb(245, 116, 0), 0 5px 0 rgb(245, 116, 0), 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
+}
+
+.tiping {
+  display: block;
+  text-align: center;
+  width: 10ch;
+  text-transform: uppercase;
+  white-space: nowrap;
+  animation: typing 5s steps(60), blink 0.5s infinite step-end alternate;
+  overflow: hidden;
+}
+@keyframes typing {
+  from {
+    color: rgb(5, 5, 5);
+    width: 0;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: rgb(245, 116, 0);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
