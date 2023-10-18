@@ -41,7 +41,7 @@ let photoElemento = document.getElementById('photo');
 let menuButon=document.querySelector('#toogleMenu');
 let navBarMenu =document.getElementById('navMenu');
 let contenidoToogle= document.querySelector('.contenedor');
-let contacToogle=document.querySelector('#toogleContacto');
+//let contacToogle=document.querySelector('#toogleContacto');
 let infoBoton=document.querySelector('.contactoToogle');
 let close = document.querySelector('#close');
 
@@ -66,12 +66,12 @@ contenidoToogle.classList.toggle('activeContendor');
     
 })
 
-contacToogle.addEventListener('click',info);
-function info (){
+// contacToogle.addEventListener('click',info);
+// function info (){
 
-infoBoton.classList.toggle('contactoActive');
+// infoBoton.classList.toggle('contactoActive');
 
-}
+// }
 
 
 enlaces.forEach(function (enlace) {

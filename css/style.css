@@ -259,28 +259,9 @@ span {
   background-size: cover;
 }
 .hero-image img {
-  position: absolute;
-  cursor: pointer;
-  left: 2rem;
-  margin: 10px auto;
-  border-radius: 50%;
-  width: 8vw;
-  transition: all ease-out 400ms;
-  animation: 2s toogleMenu 6s ease;
-}
-.hero-image img:hover {
-  transform: scale(1.1);
-}
-@keyframes toogleMenu {
-  0% {
-    transform: scale(0.5);
-  }
-  95% {
-    transform: scale(1.5);
-  }
-  100% {
-    transform: scale(1);
-  }
+  position: fixed;
+  width: 100vw;
+  z-index: -1;
 }
 
 /* Place text in the middle of the image */
@@ -290,20 +271,32 @@ span {
   justify-content: space-around;
   text-align: center;
 }
-.hero-text h1 {
-  margin-top: 10px;
-  font-size: 4rem;
+.hero-text p {
+  margin-top: 3rem;
+  font-size: 1rem;
   font-weight: bold;
-  background: linear-gradient(90deg, rgb(0, 0, 0) 3%, rgba(92, 251, 63, 0.9332107843) 27%, rgba(248, 248, 248, 0.925) 50%, rgb(4, 211, 15) 71%, rgba(55, 236, 167, 0.622) 86%);
+  background: black;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.4), 0px -1px 1px rgba(0, 0, 0, 0.3);
+}
+.hero-text h1 {
+  margin-top: 3rem;
+  font-size: 2rem;
+  font-weight: bold;
   animation-name: heroText;
   animation-duration: 400ms;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
   animation-delay: 6S;
+  background: black;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
   color: transparent;
+  text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.4), 0px -1px 1px rgba(0, 0, 0, 0.3);
 }
 @keyframes heroText {
   0% {
