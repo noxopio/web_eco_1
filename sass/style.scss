@@ -24,16 +24,29 @@ body {
   scroll-behavior: smooth;
   background: rgb(224, 224, 224) right / cover no-repeat url('/img/environmental-protection-326923_1280.jpg');
   background-position: right center;
-  background-attachment: fixed;
+  background-attachment: local;
   max-width: 100%;
 
   overflow-x: hidden;
 
-
+ 
 
 
 
 }
+
+body::-webkit-scrollbar {
+
+  width: 14px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: url('/img/149740-009688.svg');
+  border: 2px solid color.$fourColor;
+  border-radius: 4px;
+
+}
+
 
 
 
